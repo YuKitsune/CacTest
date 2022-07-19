@@ -35,3 +35,4 @@ jobs:
         OCTOPUS_SPACE: 'Spaces-1'
       with:
         project: 'Thing with a Package Reference'
+        gitRef: 'main'
