@@ -30,7 +30,7 @@ jobs:
     - name: Create a release in Octopus Deploy 🐙
       uses: OctopusDeploy/create-release-action@v2
       env:
-        OCTOPUS_API_KEY: ${{ secrets.API_KEY  }}
+        OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY  }}
         OCTOPUS_HOST: 'https://hotfix-5455.testoctopus.app'
         OCTOPUS_SPACE: 'Spaces-1'
       with:
