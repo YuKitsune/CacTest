@@ -1,0 +1,29 @@
+step "upload-a-package-to-an-aws-s3-bucket" {
+    name = "Upload a package to an AWS S3 bucket"
+
+    action {
+        action_type = "Octopus.AwsUploadS3"
+        properties = {
+            Octopus.Action.Aws.AssumeRole = "False"
+            Octopus.Action.Aws.Region = "fake"
+            Octopus.Action.Aws.S3.BucketName = "fake"
+            Octopus.Action.Aws.S3.PackageOptions = "{\"bucketKey\":\"fake\",\"bucketKeyBehaviour\":\"Custom\",\"bucketKeyPrefix\":\"\",\"storageClass\":\"STANDARD\",\"cannedAcl\":\"fake\",\"variableSubstitutionPatterns\":\"fake\",\"structuredVariableSubstitutionPatterns\":\"fake\",\"metadata\":[],\"tags\":[]}"
+            Octopus.Action.Aws.S3.TargetMode = "EntirePackage"
+            Octopus.Action.AwsAccount.UseInstanceRole = "True"
+            Octopus.Action.Package.DownloadOnTentacle = "False"
+            Octopus.Action.Package.FeedId = "octopus-server-built-in"
+            Octopus.Action.Package.PackageId = "Acme.CloudService"
+            Octopus.Action.RunOnServer = "false"
+        }
+        worker_pool_variable = ""
+
+        packages {
+            acquisition_location = "Server"
+            feed = "octopus-server-built-in"
+            package_id = "Acme.CloudService"
+            properties = {
+                SelectionMode = "immediate"
+            }
+        }
+    }
+}
