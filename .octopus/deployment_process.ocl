@@ -10,7 +10,9 @@ step "run-a-script" {
             Octopus.Action.RunOnServer = "false"
             Octopus.Action.Script.ScriptBody = "echo \"G'day\""
             Octopus.Action.Script.ScriptSource = "Inline"
-            Octopus.Action.Script.Syntax = "Bash"
+            Octopus.Action.Script.Syntax = "Bash"            
+            Octopus.Action.Package.FeedId = "octopus-server-built-in"
+            Octopus.Action.Package.PackageId = "Acme.CloudService"
         }
         worker_pool_variable = ""
 
