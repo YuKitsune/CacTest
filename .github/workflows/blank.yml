@@ -34,5 +34,5 @@ jobs:
         OCTOPUS_HOST: 'https://action-test.testoctopus.app'
         OCTOPUS_SPACE: 'Spaces-1'
       with:
-        project: 'Thing with a Package Reference'
+        project: 'Test'
         git_ref: 'main'
