@@ -31,7 +31,7 @@ jobs:
       uses: OctopusDeploy/create-release-action@v2
       env:
         OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY  }}
-        OCTOPUS_HOST: 'https://hotfix-5455.testoctopus.app'
+        OCTOPUS_HOST: 'https://action-test.testoctopus.app'
         OCTOPUS_SPACE: 'Spaces-1'
       with:
         project: 'Thing with a Package Reference'
