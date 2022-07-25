@@ -32,7 +32,7 @@ jobs:
       env:
         OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY  }}
         OCTOPUS_HOST: 'https://action-test.testoctopus.app'
-        OCTOPUS_SPACE: 'Spaces-1'
+        OCTOPUS_SPACE: 'Spaces-3'
       with:
         project: 'Test'
         git_ref: 'main'
