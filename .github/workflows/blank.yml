@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Install Octopus CLI 🐙
-      uses: OctopusDeploy/install-octopus-cli-action@v1
+      uses: OctopusDeploy/install-octopus-cli-action@v1.1.6
       with:
         version: latest
        
@@ -34,6 +34,4 @@ jobs:
         server: 'https://action-test.testoctopus.app'
         space: 'Spaces-3'
         project: 'Test'
-        deploy_to: 'Test'
-        progress: true
         git_ref: 'main'
