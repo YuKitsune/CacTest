@@ -29,11 +29,10 @@ jobs:
        
     - name: Create a release in Octopus Deploy 🐙
       uses: OctopusDeploy/create-release-action@v1.1.1
-      env:
-        OCTOPUS_API_KEY: ${{ secrets.OCTOPUS_API_KEY  }}
-        OCTOPUS_HOST: 'https://action-test.testoctopus.app'
-        OCTOPUS_SPACE: 'Spaces-3'
       with:
+        api_key: ${{ secrets.OCTOPUS_API_KEY  }}
+        server: 'https://action-test.testoctopus.app'
+        space: 'Spaces-3'
         project: 'Test'
         deploy_to: 'Test'
         progress: true
