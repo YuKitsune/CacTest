@@ -35,4 +35,5 @@ jobs:
         OCTOPUS_SPACE: 'Spaces-3'
       with:
         project: 'Test'
-        git_ref: 'main'
+        deploy_to: 'Test'
+        progress: true
