@@ -36,3 +36,4 @@ jobs:
         project: 'Test'
         deploy_to: 'Test'
         progress: true
+        git_ref: 'main'
