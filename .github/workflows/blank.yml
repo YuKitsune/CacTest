@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Install Octopus CLI 🐙
-      uses: OctopusDeploy/install-octopus-cli-action@v1    
+      uses: OctopusDeploy/install-octopus-cli-action@v1
       with:
         version: latest
        
