@@ -42,3 +42,19 @@ step "hello-world-using-bash" {
         }
     }
 }
+
+step "say-g-day" {
+    name = "Say \"G'day!\""
+    properties = {
+        Octopus.Action.TargetRoles = "foobar"
+    }
+
+    action {
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Template.Id = "ActionTemplates-1"
+            Octopus.Action.Template.Version = "0"
+        }
+        worker_pool_variable = ""
+    }
+}
